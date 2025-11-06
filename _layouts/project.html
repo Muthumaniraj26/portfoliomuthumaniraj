@@ -1,0 +1,69 @@
+---
+layout: default
+---
+
+<article class="project-page" style="max-width: 900px; margin: 0 auto; padding: 2rem;">
+  <header style="text-align: center; margin-bottom: 2rem;">
+    <h1 style="font-size: 2.5rem; margin-bottom: 0.5rem;">{{ page.title }}</h1>
+    {% if page.tagline %}
+      <p class="tagline" style="font-style: italic; font-size: 1.2rem; color: #555;">{{ page.tagline }}</p>
+    {% endif %}
+  </header>
+  
+  <div class="action-buttons" style="text-align: center; margin-bottom: 2rem;">
+    {% if page.repo_url %}
+      <a href="{{ page.repo_url }}" class="button" target="_blank" style="padding: 0.75rem 1.5rem; background-color: #007BFF; color: #fff; text-decoration: none; border-radius: 5px; margin: 0 0.5rem;">View on GitHub</a>
+    {% endif %}
+  </div>
+
+  {% if page.video_embed_url %}
+    <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; margin-bottom: 2rem;">
+      <iframe src="{{ page.video_embed_url }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position: absolute; top:0; left: 0; width: 100%; height: 100%; border-radius: 8px;"></iframe>
+    </div>
+  {% endif %}
+
+  <div class="project-content" style="margin-bottom: 2rem; line-height: 1.7; font-size: 1.1rem;">
+    {{ content }}
+  </div>
+
+  <div class="project-meta" style="display: flex; flex-wrap: wrap; gap: 2rem; margin-bottom: 2rem;">
+
+    {% if page.skills %}
+    <div class="meta-item" style="flex: 1 1 300px; background-color: #1c1c1c; padding: 1rem 1.5rem; border-radius: 8px; border: 1px solid #333;">
+      <h3 style="margin-bottom: 0.5rem;">Skills</h3>
+      <ul style="list-style-type: disc; padding-left: 1.2rem;">
+        {% for item in page.skills %}
+          <li style="margin-bottom: 0.3rem;">{{ item }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+    {% endif %}
+
+    {% if page.tools %}
+    <div class="meta-item" style="flex: 1 1 300px; background-color: #1c1c1c; padding: 1rem 1.5rem; border-radius: 8px; border: 1px solid #333;">
+      <h3 style="margin-bottom: 0.5rem;">Tools</h3>
+      <ul style="list-style-type: disc; padding-left: 1.2rem;">
+        {% for item in page.tools %}
+          <li style="margin-bottom: 0.3rem;">{{ item }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+    {% endif %}
+
+    {% if page.collaborators %}
+    <div class="meta-item" style="flex: 1 1 300px; background-color: #1c1c1c; padding: 1rem 1.5rem; border-radius: 8px; border: 1px solid #333;">
+      <h3 style="margin-bottom: 0.5rem;">Collaborators</h3>
+      <ul class="collaborator-list" style="list-style-type: disc; padding-left: 1.2rem;">
+        {% for collaborator in page.collaborators %}
+          <li style="margin-bottom: 0.3rem;">
+            <a href="https://github.com/{{ collaborator.github_username }}" target="_blank" style="color: #007BFF; text-decoration: none;">{{ collaborator.name }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+    {% endif %}
+
+  </div> <div style="text-align: center; margin-top: 2rem;">
+    <a href="/" class="back-link" style="color: #007BFF; text-decoration: none; font-weight: bold;">&larr; Back to all projects</a>
+  </div>
+</article>

@@ -1,0 +1,13 @@
+# _config.yml
+
+title: Muthumaniraj 
+description: A portfolio showcasing my projects and skills.
+author: Muthumaniraj Sanjeevi
+email: muthumanirajs3@gmail.com
+github_username: Muthumaniraj26
+
+# This tells Jekyll to treat the _projects folder as a collection
+collections:
+  projects:
+    output: true # This creates a separate page for each project
+    permalink: /projects/:name/

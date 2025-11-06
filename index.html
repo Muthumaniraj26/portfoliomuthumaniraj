@@ -1,0 +1,54 @@
+---
+layout: default
+title: Home
+---
+
+<section class="portfolio-section">
+  <h2>My Work</h2>
+  
+  <div id="filter-container">
+    <button class="filter-btn active" data-filter="all">All</button>
+    {% assign categories = site.projects | group_by: 'category' | map: 'name' %}
+    {% for category in categories %}
+      <button class="filter-btn" data-filter="{{ category | slugify }}">{{ category }}</button>
+    {% endfor %}
+  </div>
+
+  <div class="grid" id="project-grid">
+    {% for project in site.projects %}
+      <a href="{{ project.url }}" class="card-link" data-category="{{ project.category | slugify }}">
+        <div class="card" data-category="{{ project.category | slugify }}">
+          
+          <div class="card-content">
+            <h3>{{ project.title }}</h3>
+            <p>{{ project.tagline }}</p>
+            <div class="card-tools">
+              {% for tool in project.tools limit:5 %}
+                <i class="devicon-{{ tool }}-plain" title="{{ tool | capitalize }}"></i>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </a>
+    {% endfor %}
+  </div>
+</section>
+
+<section id="contact" class="contact-section">
+  <h2>Get In Touch</h2>
+  <form id="contact-form" action="https://formspree.io/f/xrbyoqpl" method="POST">
+    <div class="form-group">
+      <label for="name">Your Name</label>
+      <input type="text" id="name" name="name" required>
+    </div>
+    <div class="form-group">
+      <label for="email">Your Email</label>
+      <input type="email" id="email" name="email" required>
+    </div>
+    <div class="form-group">
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+    </div>
+    <button type="submit" class="button">Send Message</button>
+  </form>
+</section>

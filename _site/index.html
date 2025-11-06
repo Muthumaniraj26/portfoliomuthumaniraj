@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home | Muthumaniraj</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+  
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+
+  
+  
+
+  <div class="site-wrapper">
+    <aside class="sidebar">
+      <div class="sidebar-content">
+        <img src="/assets/images/profile.jpeg" alt="Profile photo of Muthumaniraj Sanjeevi" class="profile-photo">
+        <h1>Muthumaniraj Sanjeevi</h1>
+        <p class="description">A portfolio showcasing my projects and skills.</p>
+
+        <div class="stats-container">
+          <div class="stat-item">
+            <h3 class="counter" data-count="9">0</h3>
+            <p>Projects</p>
+          </div>
+          <div class="stat-item" id="skills-stats-trigger" style="cursor: pointer;">
+            <h3 class="counter" data-count="80">0</h3>
+            <p>Skills & Tools</p>
+          </div>
+        </div>
+
+        <nav class="sidebar-nav">
+          <a href="https://github.com/Muthumaniraj26" target="_blank">GitHub</a>
+          <a href="/#contact">Contact Me</a>
+        </nav>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <section class="portfolio-section">
+  <h2>My Work</h2>
+  
+  <div id="filter-container">
+    <button class="filter-btn active" data-filter="all">All</button>
+    
+    
+      <button class="filter-btn" data-filter="machine-learning-and-ai">Machine Learning and AI</button>
+    
+      <button class="filter-btn" data-filter="machine-learning-and-deep-learning">Machine Learning and Deep Learning</button>
+    
+      <button class="filter-btn" data-filter="deep-learning">Deep Learning</button>
+    
+      <button class="filter-btn" data-filter="mcp">MCP</button>
+    
+      <button class="filter-btn" data-filter="full-stack-and-mcp">Full Stack and MCP</button>
+    
+  </div>
+
+  <div class="grid" id="project-grid">
+    
+      <a href="/projects/01-project-alpha/" class="card-link" data-category="machine-learning-and-ai">
+        <div class="card" data-category="machine-learning-and-ai">
+          
+          <div class="card-content">
+            <h3>Plant Disease Detection Web App</h3>
+            <p>Real-time plant disease detection with preventive insights.</p>
+            <div class="card-tools">
+              
+                <i class="devicon-Python-plain" title="Python"></i>
+              
+                <i class="devicon-Flask-plain" title="Flask"></i>
+              
+                <i class="devicon-TensorFlow Lite-plain" title="Tensorflow lite"></i>
+              
+                <i class="devicon-OpenCV-plain" title="Opencv"></i>
+              
+                <i class="devicon-JavaScript-plain" title="Javascript"></i>
+              
+            </div>
+          </div>
+        </div>
+      </a>
+    
+      <a href="/projects/02-project-beta/" class="card-link" data-category="machine-learning-and-deep-learning">
+        <div class="card" data-category="machine-learning-and-deep-learning">
+          
+          <div class="card-content">
+            <h3>Driver Distraction Detection Alert System</h3>
+            <p>Real-time driver monitoring for enhanced road safety.</p>
+            <div class="card-tools">
+              
+                <i class="devicon-Python-plain" title="Python"></i>
+              
+                <i class="devicon-OpenCV-plain" title="Opencv"></i>
+              
+                <i class="devicon-YOLOv8-plain" title="Yolov8"></i>
+              
+                <i class="devicon-TensorFlow-plain" title="Tensorflow"></i>
+              
+                <i class="devicon-Flask-plain" title="Flask"></i>
+              
+            </div>
+          </div>
+        </div>
+      </a>
+    
+      <a href="/projects/03-project/" class="card-link" data-category="deep-learning">
+        <div class="card" data-category="deep-learning">
+          
+          <div class="card-content">
+            <h3>Real-Time Emotion Detection</h3>
+            <p>Analyze facial expressions in real time using deep learning.</p>
+            <div class="card-tools">
+              
+                <i class="devicon-Python-plain" title="Python"></i>
+              
+                <i class="devicon-OpenCV-plain" title="Opencv"></i>
+              
+                <i class="devicon-TensorFlow/Keras-plain" title="Tensorflow/keras"></i>
+              
+                <i class="devicon-Dlib-plain" title="Dlib"></i>
+              
+                <i class="devicon-NumPy-plain" title="Numpy"></i>
+              
+            </div>
+          </div>
+        </div>
+      </a>
+    
+      <a href="/projects/04-project/" class="card-link" data-category="machine-learning-and-ai">
+        <div class="card" data-category="machine-learning-and-ai">
+          
+          <div class="card-content">
+            <h3>AI-Powered Face Recognition Attendance System</h3>
+            <p>Automated attendance tracking with fraud prevention.</p>
+            <div class="card-tools">
+              
+                <i class="devicon-Python-plain" title="Python"></i>
+              
+                <i class="devicon-OpenCV-plain" title="Opencv"></i>
+              
+                <i class="devicon-Dlib-plain" title="Dlib"></i>
+              
+                <i class="devicon-SQLite-plain" title="Sqlite"></i>
+              
+                <i class="devicon-Tkinter-plain" title="Tkinter"></i>
+              
+            </div>
+          </div>
+        </div>
+      </a>
+    
+      <a href="/projects/05-project/" class="card-link" data-category="mcp">
+        <div class="card" data-category="mcp">
+          
+          <div class="card-content">
+            <h3>Automatic LinkedIn Post Generator</h3>
+            <p>Generate and publish LinkedIn posts automatically using no-code tools.</p>
+            <div class="card-tools">
+              
+                <i class="devicon-Pipedream-plain" title="Pipedream"></i>
+              
+                <i class="devicon-Cursor Tools-plain" title="Cursor tools"></i>
+              
+                <i class="devicon-MCP Protocol-plain" title="Mcp protocol"></i>
+              
+                <i class="devicon-JavaScript-plain" title="Javascript"></i>
+              
+                <i class="devicon-APIs-plain" title="Apis"></i>
+              
+            </div>
+          </div>
+        </div>
+      </a>
+    
+      <a href="/projects/06-project/" class="card-link" data-category="mcp">
+        <div class="card" data-category="mcp">
+          
+          <div class="card-content">
+            <h3>Automatic Email Sender</h3>
+            <p>Send professional emails automatically using AI and no-code tools.</p>
+            <div class="card-tools">
+              
+                <i class="devicon-MCP Protocol-plain" title="Mcp protocol"></i>
+              
+                <i class="devicon-Pipedream-plain" title="Pipedream"></i>
+              
+                <i class="devicon-Cursor Tools-plain" title="Cursor tools"></i>
+              
+                <i class="devicon-OpenAI API-plain" title="Openai api"></i>
+              
+                <i class="devicon-No-Code Logic-plain" title="No-code logic"></i>
+              
+            </div>
+          </div>
+        </div>
+      </a>
+    
+      <a href="/projects/07-project/" class="card-link" data-category="full-stack-and-mcp">
+        <div class="card" data-category="full-stack-and-mcp">
+          
+          <div class="card-content">
+            <h3>AI Chatbot System</h3>
+            <p>with real-time responses using Gemini API."</p>
+            <div class="card-tools">
+              
+                <i class="devicon-MCP Server-plain" title="Mcp server"></i>
+              
+                <i class="devicon-Pipedream-plain" title="Pipedream"></i>
+              
+                <i class="devicon-Gemini API-plain" title="Gemini api"></i>
+              
+                <i class="devicon-YouTube API-plain" title="Youtube api"></i>
+              
+                <i class="devicon-HTML-plain" title="Html"></i>
+              
+            </div>
+          </div>
+        </div>
+      </a>
+    
+      <a href="/projects/08-project/" class="card-link" data-category="machine-learning-and-deep-learning">
+        <div class="card" data-category="machine-learning-and-deep-learning">
+          
+          <div class="card-content">
+            <h3>AI Archaeologist</h3>
+            <p>Analyze artifacts and uncover historical context using AI.</p>
+            <div class="card-tools">
+              
+                <i class="devicon-PyTorch-plain" title="Pytorch"></i>
+              
+                <i class="devicon-Torchvision-plain" title="Torchvision"></i>
+              
+                <i class="devicon-Flask-plain" title="Flask"></i>
+              
+                <i class="devicon-Pillow-plain" title="Pillow"></i>
+              
+                <i class="devicon-Matplotlib-plain" title="Matplotlib"></i>
+              
+            </div>
+          </div>
+        </div>
+      </a>
+    
+      <a href="/projects/09-project/" class="card-link" data-category="machine-learning-and-ai">
+        <div class="card" data-category="machine-learning-and-ai">
+          
+          <div class="card-content">
+            <h3>ML Launchpad</h3>
+            <p>Validate your ML project ideas and generate AI-powered roadmaps instantly.</p>
+            <div class="card-tools">
+              
+                <i class="devicon-Python-plain" title="Python"></i>
+              
+                <i class="devicon-Hugging Face API-plain" title="Hugging face api"></i>
+              
+                <i class="devicon-FastAPI-plain" title="Fastapi"></i>
+              
+                <i class="devicon-OpenAI API-plain" title="Openai api"></i>
+              
+                <i class="devicon-Machine Learning Pipelines-plain" title="Machine learning pipelines"></i>
+              
+            </div>
+          </div>
+        </div>
+      </a>
+    
+  </div>
+</section>
+
+<section id="contact" class="contact-section">
+  <h2>Get In Touch</h2>
+  <form id="contact-form" action="https://formspree.io/f/xrbyoqpl" method="POST">
+    <div class="form-group">
+      <label for="name">Your Name</label>
+      <input type="text" id="name" name="name" required>
+    </div>
+    <div class="form-group">
+      <label for="email">Your Email</label>
+      <input type="email" id="email" name="email" required>
+    </div>
+    <div class="form-group">
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+    </div>
+    <button type="submit" class="button">Send Message</button>
+  </form>
+</section>
+      <footer class="main-footer">
+        <p>&copy; 2025 Muthumaniraj Sanjeevi</p>
+      </footer>
+    </main>
+  </div>
+
+  <div id="skills-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-button">&times;</span>
+      <h2>All Skills & Tools</h2>
+      <ul class="skills-modal-list">
+        
+          <li>Ai text generation</li>
+        
+          <li>Api development</li>
+        
+          <li>Api integration</li>
+        
+          <li>Apis</li>
+        
+          <li>Alert system integration</li>
+        
+          <li>Anti-spoofing and fraud prevention</li>
+        
+          <li>Attendance automation</li>
+        
+          <li>Automation design</li>
+        
+          <li>Bootstrap</li>
+        
+          <li>Css</li>
+        
+          <li>Chart.js</li>
+        
+          <li>Complexity estimation</li>
+        
+          <li>Computer vision</li>
+        
+          <li>Computer vision integration</li>
+        
+          <li>Context detection</li>
+        
+          <li>Context-based generation</li>
+        
+          <li>Conversational ai</li>
+        
+          <li>Cursor tools</li>
+        
+          <li>Data visualization</li>
+        
+          <li>Database management</li>
+        
+          <li>Dataset preprocessing</li>
+        
+          <li>Dataset suggestion</li>
+        
+          <li>Deep learning model optimization</li>
+        
+          <li>Dlib</li>
+        
+          <li>Driver behavior analysis</li>
+        
+          <li>Efficientnetv2</li>
+        
+          <li>Email automation</li>
+        
+          <li>Face detection and recognition</li>
+        
+          <li>Facial expression recognition</li>
+        
+          <li>Fastapi</li>
+        
+          <li>Flask</li>
+        
+          <li>Gui development</li>
+        
+          <li>Gemini api</li>
+        
+          <li>Geospatial analysis</li>
+        
+          <li>Html</li>
+        
+          <li>Hugging face api</li>
+        
+          <li>Image processing</li>
+        
+          <li>Javascript</li>
+        
+          <li>Knowledge graph enrichment</li>
+        
+          <li>Mcp protocol</li>
+        
+          <li>Mcp server</li>
+        
+          <li>Ml project planning</li>
+        
+          <li>Machine learning pipelines</li>
+        
+          <li>Mathematical modeling</li>
+        
+          <li>Matplotlib</li>
+        
+          <li>Model deployment</li>
+        
+          <li>Model recommendation</li>
+        
+          <li>Model training & evaluation</li>
+        
+          <li>Multilingual support</li>
+        
+          <li>No-code logic</li>
+        
+          <li>Numpy</li>
+        
+          <li>Object detection</li>
+        
+          <li>Openai api</li>
+        
+          <li>Opencv</li>
+        
+          <li>Pillow</li>
+        
+          <li>Pipedream</li>
+        
+          <li>Pyqt5</li>
+        
+          <li>Pytorch</li>
+        
+          <li>Python</li>
+        
+          <li>Real-time inference</li>
+        
+          <li>Real-time object detection</li>
+        
+          <li>Real-time response handling</li>
+        
+          <li>Real-time video processing</li>
+        
+          <li>Report automation</li>
+        
+          <li>Report generation</li>
+        
+          <li>Reportlab</li>
+        
+          <li>Sqlite</li>
+        
+          <li>Social media integration</li>
+        
+          <li>System requirement prediction</li>
+        
+          <li>Tensorflow</li>
+        
+          <li>Tensorflow lite</li>
+        
+          <li>Tensorflow/keras</li>
+        
+          <li>Tkinter</li>
+        
+          <li>Torchvision</li>
+        
+          <li>Web development</li>
+        
+          <li>Workflow automation</li>
+        
+          <li>Workflow management</li>
+        
+          <li>Workflow orchestration</li>
+        
+          <li>Yolov8</li>
+        
+          <li>Youtube api</li>
+        
+      </ul>
+      
+    </div>
+  </div>
+
+  <script src="/assets/js/filter.js"></script>
+
+</body>
+</html>

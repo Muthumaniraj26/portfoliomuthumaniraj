@@ -1,0 +1,202 @@
+/* --- 0. Modern CSS Reset --- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/* --- End of Reset --- */
+
+
+/* --- 1. Global Styles & Variables --- */
+:root {
+  --bg-dark: #121212;
+  --card-bg: #1e1e1e;
+  --accent-color: #007BFF;
+  --text-light: #e0e0e0;
+  --text-muted: #888;
+  --border-color: #333;
+  --font-heading: 'Poppins', sans-serif;
+  --font-body: 'Inter', sans-serif;
+}
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+  font-family: var(--font-body);
+  line-height: 1.6;
+}
+h1, h2, h3 { font-family: var(--font-heading); font-weight: 700; }
+a { color: var(--accent-color); text-decoration: none; transition: color 0.2s ease; }
+a:hover { color: white; }
+
+/* --- 2. Main Layout (Sidebar + Content) --- */
+.site-wrapper {
+  display: grid;
+  grid-template-columns: 350px 1fr;
+  min-height: 100vh;
+}
+.sidebar {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  background-color: var(--card-bg);
+  border-right: 1px solid var(--border-color);
+  padding: 2.5rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+.sidebar-content { text-align: center; }
+.main-content { padding: 3rem; }
+.main-footer { text-align: center; margin-top: 4rem; padding-top: 2rem; border-top: 1px solid var(--border-color); color: var(--text-muted); }
+
+/* --- 3. Sidebar Content --- */
+.profile-photo { width: 150px; height: 150px; border-radius: 50%; object-fit: cover; border: 4px solid var(--border-color); margin-bottom: 1.5rem; }
+.sidebar h1 { font-size: 2rem; margin: 0 0 0.5rem 0; }
+.sidebar .description { font-size: 1rem; color: var(--text-muted); margin-bottom: 2rem; }
+.stats-container { display: flex; justify-content: space-around; text-align: center; margin-bottom: 2rem; }
+.stat-item { cursor: pointer; } /* Make the whole stat item clickable */
+.stat-item h3 { font-size: 2rem; color: var(--accent-color); margin: 0; }
+.stat-item p { margin: 0.25rem 0 0 0; color: var(--text-muted); font-size: 0.9rem; }
+.sidebar-nav { display: flex; flex-direction: column; gap: 1rem; }
+.sidebar-nav a { font-weight: 500; font-size: 1.1rem; }
+
+/* --- 4. Main Content Sections --- */
+.portfolio-section, .contact-section, .project-page { margin-bottom: 5rem; }
+.portfolio-section h2, .contact-section h2, .project-page h1 { font-size: 2.5rem; margin-top: 0; margin-bottom: 2rem; border-bottom: 2px solid var(--border-color); padding-bottom: 1rem; }
+#filter-container { display: flex; justify-content: center; flex-wrap: wrap; gap: 1rem; margin-bottom: 2.5rem; }
+.filter-btn { background: transparent; border: 1px solid var(--border-color); color: var(--text-muted); padding: 0.5rem 1.5rem; border-radius: 20px; cursor: pointer; transition: all 0.2s ease; }
+.filter-btn:hover { background-color: var(--card-bg); color: var(--text-light); }
+.filter-btn.active { background-color: var(--accent-color); color: white; border-color: var(--accent-color); }
+
+/* --- 5. Project Card Design --- */
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+.card-link { text-decoration: none; display: block; }
+.card {
+  background-color: var(--card-bg);
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+}
+.card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
+.card-image-container { position: relative; height: 200px; overflow: hidden; background-color: #000; }
+.card-thumb-static, .card-thumb-preview { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; transition: opacity 0.4s ease-in-out; }
+.card-thumb-preview { opacity: 0; }
+.card-link:hover .card-thumb-static { opacity: 0; }
+.card-link:hover .card-thumb-preview { opacity: 1; }
+.card-content { padding: 1.5rem; color: var(--text-light); }
+.card-content h3 { margin: 0 0 0.5rem 0; font-size: 1.3rem; }
+.card-content p { color: var(--text-muted); margin: 0 0 1rem 0; }
+.card-tools { display: flex; gap: 1rem; font-size: 1.5rem; color: var(--text-muted); }
+
+/* --- 6. Form Styling --- */
+.form-group { margin-bottom: 1.5rem; }
+.form-group label { display: block; margin-bottom: 0.5rem; font-weight: 500; }
+.form-group input, .form-group textarea {
+  width: 100%; padding: 0.8rem; background-color: var(--bg-dark); border: 1px solid var(--border-color); border-radius: 5px; color: var(--text-light); font-family: inherit; font-size: 1rem; box-sizing: border-box;
+}
+.button {
+  width: 100%; padding: 1rem; background-color: var(--accent-color); color: white; border: none; border-radius: 5px; font-size: 1.1rem; font-family: var(--font-heading); cursor: pointer;
+}
+
+/* --- 7. Single Project Page Styling --- */
+.project-page .tagline { font-style: italic; font-size: 1.2rem; color: var(--text-muted); }
+.project-meta { display: flex; flex-direction: column; gap: 2rem; margin-top: 3rem; background: var(--card-bg); padding: 1.5rem; border-radius: 8px; border: 1px solid var(--border-color); }
+.meta-item h3 { margin-bottom: 1rem; }
+.skills-list { list-style: disc; padding-left: 20px; margin: 0; }
+.skills-list li { margin-bottom: 5px; }
+.tools-grid { display: flex; flex-wrap: wrap; gap: 1rem; }
+.tool-item { display: flex; align-items: center; gap: 8px; background-color: #333; padding: 8px 12px; border-radius: 20px; font-size: 0.9em; }
+.tool-item i { font-size: 1.5em; color: var(--text-muted); }
+
+/* --- 8. Responsive Design --- */
+@media (max-width: 992px) {
+  .site-wrapper { grid-template-columns: 1fr; }
+  .sidebar {
+    position: relative; height: auto; border-right: none; border-bottom: 1px solid var(--border-color);
+  }
+  .main-content { padding: 2rem; }
+}
+
+/* --- 9. Skills & Tools Modal --- */
+.modal {
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.7); /* Dark overlay */
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease, visibility 0s 0.3s;
+}
+.modal.modal-open {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+.modal-content {
+  position: relative;
+  background-color: var(--card-bg);
+  margin: 10% auto;
+  padding: 30px;
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  width: 80%;
+  max-width: 600px;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.4);
+}
+.close-button {
+  color: var(--text-muted);
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  font-size: 28px;
+  font-weight: bold;
+}
+.close-button:hover,
+.close-button:focus {
+  color: var(--text-light);
+  text-decoration: none;
+  cursor: pointer;
+}
+.modal-content h2 {
+  margin-top: 0;
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: 1rem;
+}
+.skills-modal-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 1.5rem;
+  column-count: 2;
+  column-gap: 20px;
+}
+.skills-modal-list li {
+  padding: 8px;
+  border-radius: 5px;
+  transition: background-color 0.2s ease;
+}
+.skills-modal-list li:hover {
+  background-color: #333;
+}
+@media (max-width: 600px) {
+  .skills-modal-list {
+    column-count: 1;
+  }
+}
+.site-wrapper {
+  display: grid;
+  grid-template-columns: 350px 1fr;
+  min-height: 100vh;
+  
+  /* --- ADD THESE TWO LINES --- */
+  max-width: 100vw;      /* Explicitly set max width to the viewport width */
+  overflow-x: hidden;    /* Hide any tiny overflow that might still occur */
+}

@@ -6,8 +6,8 @@ category: "Machine Learning and Deep Learning"
 repo_url: "https://github.com/Muthumaniraj26/archeology"
 video_embed_url: "https://www.youtube.com/embed/zUat943SHtk"
 collaborators:
-  - name: "Your Name"
-    github_username: "your-github"
+  - name: "muthumaniraj"
+    github_username: "Muthumaniraj26"
     
 skills:
   - "Object Detection"
@@ -40,3 +40,4 @@ I am currently focusing on:
 Future updates will include enhanced multi-artifact support, improved contextual descriptions, and interactive visualizations.
 
 The goal of this project is to **augment human expertise**, making archaeology more accessible and bridging the gap between AI predictions and historical understanding.
+

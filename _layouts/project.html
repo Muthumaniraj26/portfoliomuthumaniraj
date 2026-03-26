@@ -1,0 +1,80 @@
+---
+layout: default
+---
+
+<article class="project-page" style="max-width: 900px; margin: 0 auto; padding: 2rem;">
+
+        <header class="project-header" style="text-align: center; margin-bottom: 2rem;">
+          <h1>{{ page.title }}</h1>
+          {% if page.tagline %}
+          <p class="tagline">{{ page.tagline }}</p>
+          {% endif %}
+
+          <div class="action-buttons" style="margin-top: 1.5rem;">
+            {% if page.repo_url %}
+            <a href="{{ page.repo_url }}" class="button" target="_blank"
+              style="padding: 0.8rem 2rem; background-color: #007BFF; color: #fff; text-decoration: none; border-radius: 50px; font-weight: 600;">
+              View Source Code
+            </a>
+            {% endif %}
+          </div>
+        </header>
+
+        {% if page.video_embed_url %}
+        <div class="video-container"
+          style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; margin-bottom: 3rem; border-radius: 12px; box-shadow: 0 20px 40px rgba(0,0,0,0.5);">
+          <iframe src="{{ page.video_embed_url }}" frameborder="0" allowfullscreen
+            style="position: absolute; top:0; left: 0; width: 100%; height: 100%;"></iframe>
+        </div>
+        {% endif %}
+
+        <div class="project-content" style="line-height: 1.8; font-size: 1.15rem; color: #ddd;">
+          {{ content }}
+        </div>
+
+        <div class="project-meta">
+          {% if page.skills %}
+          <div>
+            <h3 style="color: #007BFF; margin-top: 0;">Skills Applied</h3>
+            <div class="pill-container">
+              {% for skill in page.skills %}
+              <span class="pill">{{ skill }}</span>
+              {% endfor %}
+            </div>
+          </div>
+          {% endif %}
+          {% if page.tools %}
+          <div>
+            <h3 style="color: #007BFF; margin-top: 0;">Tools Used</h3>
+            <div class="pill-container">
+              {% for tool in page.tools %}
+              <span class="pill">{{ tool }}</span>
+              {% endfor %}
+            </div>
+          </div>
+          {% endif %}
+        </div>
+
+        {% if page.collaborators %}
+        <section class="collaborator-section">
+          <h3 style="color: #fff; font-size: 1.5rem;">Project Contributors</h3>
+          <div class="collab-grid">
+            {% for collaborator in page.collaborators %}
+            <a href="https://github.com/{{ collaborator.github_username }}" target="_blank" class="github-card">
+              <span class="external-icon">↗</span>
+              <img src="https://github.com/{{ collaborator.github_username }}.png" alt="{{ collaborator.name }}">
+              <div class="github-card-info">
+                <h4>{{ collaborator.name }}</h4>
+                <p>{{ collaborator.role }}</p>
+                <span class="github-handle">@{{ collaborator.github_username }}</span>
+              </div>
+            </a>
+            {% endfor %}
+          </div>
+        </section>
+        {% endif %}
+
+        <footer style="text-align: center; margin-top: 4rem; padding-bottom: 2rem;">
+          <a href="/" style="color: #007BFF; text-decoration: none; font-weight: bold;">&larr; Back to Portfolio</a>
+        </footer>
+      </article>

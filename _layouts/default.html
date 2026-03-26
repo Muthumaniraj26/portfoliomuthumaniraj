@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Keep existing head content -->
+  <!-- Add this meta tag for mobile web app capabilities -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <!-- Add favicon for app icon -->
+  <link rel="icon" sizes="192x192" href="/assets/images/profile.jpeg">
+  <link rel="apple-touch-icon" href="/assets/images/profile.jpeg">
+  <!-- Keep other existing head content -->
+</head>
+<body>
+  <!-- Keep existing body content until sidebar -->
+  <div class="site-wrapper">
+    <aside class="sidebar">
+      <div class="sidebar-content">
+        <!-- Keep existing sidebar content -->
+      </div>
+    </aside>
+
+    <main class="main-content">
+      {{ content }}
+      <!-- Add a bottom navigation for mobile -->
+      <nav class="mobile-nav">
+        <a href="/" class="mobile-nav-item">
+          <i class="fas fa-home"></i>
+          <span>Home</span>
+        </a>
+        <a href="https://github.com/{{ site.github_username }}" class="mobile-nav-item">
+          <i class="devicon-github-original"></i>
+          <span>GitHub</span>
+        </a>
+        <a href="https://www.linkedin.com/in/muthumaniraj-sanjeevi/" class="mobile-nav-item">
+          <i class="devicon-linkedin-plain"></i>
+          <span>LinkedIn</span>
+        </a>
+        <a href="/#contact" class="mobile-nav-item">
+          <i class="fas fa-envelope"></i>
+          <span>Contact</span>
+        </a>
+      </nav>
+      <!-- Keep existing footer -->
+      <footer class="main-footer">
+        <p>&copy; {% assign current_year = 'now' | date: '%Y' %}{{ current_year }} {{ site.author }}</p>
+      </footer>
+    </main>
+  </div>
+  <!-- Keep rest of the existing content -->
+</body>
+</html>

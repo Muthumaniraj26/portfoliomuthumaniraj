@@ -1,325 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AI-Powered Face Recognition Attendance System | Muthumaniraj</title>
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
-  
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{title} | Portfolio</title>
   <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
 </head>
-<body>
-
-  
-  
-
-  <div class="site-wrapper">
-    <aside class="sidebar">
-      <div class="sidebar-content">
-        <img src="/assets/images/profile.jpeg" alt="Profile photo of Muthumaniraj Sanjeevi" class="profile-photo">
-        <h1>Muthumaniraj Sanjeevi</h1>
-        <p class="description">A portfolio showcasing my projects and skills.</p>
-
-        <div class="stats-container">
-          <div class="stat-item">
-            <h3 class="counter" data-count="9">0</h3>
-            <p>Projects</p>
-          </div>
-          <div class="stat-item" id="skills-stats-trigger" style="cursor: pointer;">
-            <h3 class="counter" data-count="80">0</h3>
-            <p>Skills & Tools</p>
-          </div>
+<body style="background: #121212; color: #e0e0e0; margin: 0;">
+    <div class="site-wrapper">
+      <aside class="sidebar">
+        <div class="sidebar-content">
+          <img src="/assets/images/profile.jpeg" alt="Profile" class="profile-photo" style="width: 150px; height: 150px; border-radius: 50%; border: 3px solid #007BFF; margin-bottom: 1.5rem; object-fit: cover;">
+          <h1 style="font-size: 1.8rem; margin: 0; color: #fff;">Muthumaniraj Sanjeevi</h1>
+          <p style="color: #888; font-size: 0.9rem; margin: 0.5rem 0 2rem 0;">A portfolio showcasing my projects and skills.</p>
+          
+          <nav class="sidebar-nav" style="display: flex; flex-direction: column; gap: 1rem; text-align: left; padding: 0 1rem;">
+            <a href="/" style="color: #fff; text-decoration: none; font-weight: 500; display: flex; align-items: center; gap: 10px;">
+              <i class="fas fa-home"></i> Home
+            </a>
+            <a href="https://github.com/Muthumaniraj26" target="_blank" style="color: #888; text-decoration: none; font-weight: 500; display: flex; align-items: center; gap: 10px;">
+              <i class="devicon-github-original"></i> GitHub
+            </a>
+            <a href="https://www.youtube.com/@muthumanirajs" target="_blank" style="color: #888; text-decoration: none; font-weight: 500; display: flex; align-items: center; gap: 10px;">
+              <i class="devicon-youtube-plain"></i> Youtube
+            </a>
+            <a href="https://medium.com/@muthumanirajs3" target="_blank" style="color: #888; text-decoration: none; font-weight: 500; display: flex; align-items: center; gap: 10px;">
+              <i class="fab fa-medium"></i> Medium
+            </a>
+            <a href="https://www.linkedin.com/in/muthumaniraj-sanjeevi/" target="_blank" style="color: #888; text-decoration: none; font-weight: 500; display: flex; align-items: center; gap: 10px;">
+              <i class="devicon-linkedin-plain"></i> LinkedIn
+            </a>
+          </nav>
         </div>
-
-        <nav class="sidebar-nav">
-          <a href="https://github.com/Muthumaniraj26" target="_blank">GitHub</a>
-          <a href="/#contact">Contact Me</a>
-        </nav>
-      </div>
-    </aside>
-
-    <main class="main-content">
-      <article class="project-page" style="max-width: 900px; margin: 0 auto; padding: 2rem;">
-  <header style="text-align: center; margin-bottom: 2rem;">
-    <h1 style="font-size: 2.5rem; margin-bottom: 0.5rem;">AI-Powered Face Recognition Attendance System</h1>
-    
-      <p class="tagline" style="font-style: italic; font-size: 1.2rem; color: #555;">Automated attendance tracking with fraud prevention.</p>
-    
-  </header>
-  
-  <div class="action-buttons" style="text-align: center; margin-bottom: 2rem;">
-    
-      <a href="https://github.com/Muthumaniraj26/Real-Time-Face-Recognition-Attendance-System" class="button" target="_blank" style="padding: 0.75rem 1.5rem; background-color: #007BFF; color: #fff; text-decoration: none; border-radius: 5px; margin: 0 0.5rem;">View on GitHub</a>
-    
-  </div>
-
-  
-    <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; margin-bottom: 2rem;">
-      <iframe src="https://www.youtube.com/embed/your-video-id" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position: absolute; top:0; left: 0; width: 100%; height: 100%; border-radius: 8px;"></iframe>
-    </div>
-  
-
-  <div class="project-content" style="margin-bottom: 2rem; line-height: 1.7; font-size: 1.1rem;">
-    <p><strong>Face Recognition Attendance System</strong></p>
-
-<p>This system automates attendance tracking by recognizing student faces in real-time. I built the face registration, embedding extraction, and recognition pipeline, along with GUI interfaces for monitoring and managing the system.</p>
-
-<h3 id="core-features">Core Features</h3>
-<ul>
-  <li>Real-time face recognition using 128D embeddings.</li>
-  <li>Student in/out time tracking with centroid-based re-identification.</li>
-  <li>Fraud detection to prevent photo-based spoofing.</li>
-  <li>GUI for face registration, saving datasets, and monitoring attendance.</li>
-  <li>Logs and alerts for missing or unregistered faces.</li>
-</ul>
-
-<p>The goal of this project was to streamline attendance management, reduce manual effort, and ensure accuracy and security in classrooms.</p>
-
-  </div>
-
-  <div class="project-meta" style="display: flex; flex-wrap: wrap; gap: 2rem; margin-bottom: 2rem;">
-
-    
-    <div class="meta-item" style="flex: 1 1 300px; background-color: #1c1c1c; padding: 1rem 1.5rem; border-radius: 8px; border: 1px solid #333;">
-      <h3 style="margin-bottom: 0.5rem;">Skills</h3>
-      <ul style="list-style-type: disc; padding-left: 1.2rem;">
-        
-          <li style="margin-bottom: 0.3rem;">Face Detection and Recognition</li>
-        
-          <li style="margin-bottom: 0.3rem;">Attendance Automation</li>
-        
-          <li style="margin-bottom: 0.3rem;">Anti-Spoofing and Fraud Prevention</li>
-        
-          <li style="margin-bottom: 0.3rem;">Database Management</li>
-        
-          <li style="margin-bottom: 0.3rem;">Real-Time Video Processing</li>
-        
-          <li style="margin-bottom: 0.3rem;">GUI Development</li>
-        
-      </ul>
-    </div>
-    
-
-    
-    <div class="meta-item" style="flex: 1 1 300px; background-color: #1c1c1c; padding: 1rem 1.5rem; border-radius: 8px; border: 1px solid #333;">
-      <h3 style="margin-bottom: 0.5rem;">Tools</h3>
-      <ul style="list-style-type: disc; padding-left: 1.2rem;">
-        
-          <li style="margin-bottom: 0.3rem;">Python</li>
-        
-          <li style="margin-bottom: 0.3rem;">OpenCV</li>
-        
-          <li style="margin-bottom: 0.3rem;">Dlib</li>
-        
-          <li style="margin-bottom: 0.3rem;">SQLite</li>
-        
-          <li style="margin-bottom: 0.3rem;">Tkinter</li>
-        
-          <li style="margin-bottom: 0.3rem;">PyQt5</li>
-        
-      </ul>
-    </div>
-    
-
-    
-    <div class="meta-item" style="flex: 1 1 300px; background-color: #1c1c1c; padding: 1rem 1.5rem; border-radius: 8px; border: 1px solid #333;">
-      <h3 style="margin-bottom: 0.5rem;">Collaborators</h3>
-      <ul class="collaborator-list" style="list-style-type: disc; padding-left: 1.2rem;">
-        
-          <li style="margin-bottom: 0.3rem;">
-            <a href="https://github.com/Muthumaniraj26" target="_blank" style="color: #007BFF; text-decoration: none;">Muthumaniraj</a>
-          </li>
-        
-      </ul>
-    </div>
-    
-
-  </div> <div style="text-align: center; margin-top: 2rem;">
-    <a href="/" class="back-link" style="color: #007BFF; text-decoration: none; font-weight: bold;">&larr; Back to all projects</a>
-  </div>
-</article>
-      <footer class="main-footer">
-        <p>&copy; 2025 Muthumaniraj Sanjeevi</p>
-      </footer>
-    </main>
-  </div>
-
-  <div id="skills-modal" class="modal">
-    <div class="modal-content">
-      <span class="close-button">&times;</span>
-      <h2>All Skills & Tools</h2>
-      <ul class="skills-modal-list">
-        
-          <li>Ai text generation</li>
-        
-          <li>Api development</li>
-        
-          <li>Api integration</li>
-        
-          <li>Apis</li>
-        
-          <li>Alert system integration</li>
-        
-          <li>Anti-spoofing and fraud prevention</li>
-        
-          <li>Attendance automation</li>
-        
-          <li>Automation design</li>
-        
-          <li>Bootstrap</li>
-        
-          <li>Css</li>
-        
-          <li>Chart.js</li>
-        
-          <li>Complexity estimation</li>
-        
-          <li>Computer vision</li>
-        
-          <li>Computer vision integration</li>
-        
-          <li>Context detection</li>
-        
-          <li>Context-based generation</li>
-        
-          <li>Conversational ai</li>
-        
-          <li>Cursor tools</li>
-        
-          <li>Data visualization</li>
-        
-          <li>Database management</li>
-        
-          <li>Dataset preprocessing</li>
-        
-          <li>Dataset suggestion</li>
-        
-          <li>Deep learning model optimization</li>
-        
-          <li>Dlib</li>
-        
-          <li>Driver behavior analysis</li>
-        
-          <li>Efficientnetv2</li>
-        
-          <li>Email automation</li>
-        
-          <li>Face detection and recognition</li>
-        
-          <li>Facial expression recognition</li>
-        
-          <li>Fastapi</li>
-        
-          <li>Flask</li>
-        
-          <li>Gui development</li>
-        
-          <li>Gemini api</li>
-        
-          <li>Geospatial analysis</li>
-        
-          <li>Html</li>
-        
-          <li>Hugging face api</li>
-        
-          <li>Image processing</li>
-        
-          <li>Javascript</li>
-        
-          <li>Knowledge graph enrichment</li>
-        
-          <li>Mcp protocol</li>
-        
-          <li>Mcp server</li>
-        
-          <li>Ml project planning</li>
-        
-          <li>Machine learning pipelines</li>
-        
-          <li>Mathematical modeling</li>
-        
-          <li>Matplotlib</li>
-        
-          <li>Model deployment</li>
-        
-          <li>Model recommendation</li>
-        
-          <li>Model training & evaluation</li>
-        
-          <li>Multilingual support</li>
-        
-          <li>No-code logic</li>
-        
-          <li>Numpy</li>
-        
-          <li>Object detection</li>
-        
-          <li>Openai api</li>
-        
-          <li>Opencv</li>
-        
-          <li>Pillow</li>
-        
-          <li>Pipedream</li>
-        
-          <li>Pyqt5</li>
-        
-          <li>Pytorch</li>
-        
-          <li>Python</li>
-        
-          <li>Real-time inference</li>
-        
-          <li>Real-time object detection</li>
-        
-          <li>Real-time response handling</li>
-        
-          <li>Real-time video processing</li>
-        
-          <li>Report automation</li>
-        
-          <li>Report generation</li>
-        
-          <li>Reportlab</li>
-        
-          <li>Sqlite</li>
-        
-          <li>Social media integration</li>
-        
-          <li>System requirement prediction</li>
-        
-          <li>Tensorflow</li>
-        
-          <li>Tensorflow lite</li>
-        
-          <li>Tensorflow/keras</li>
-        
-          <li>Tkinter</li>
-        
-          <li>Torchvision</li>
-        
-          <li>Web development</li>
-        
-          <li>Workflow automation</li>
-        
-          <li>Workflow management</li>
-        
-          <li>Workflow orchestration</li>
-        
-          <li>Yolov8</li>
-        
-          <li>Youtube api</li>
-        
-      </ul>
+      </aside>
       
+      <main class="main-content" style="margin-left: 350px; padding: 3rem;">
+          <article class="project-page" style="max-width: 900px; margin: 0 auto; padding: 2rem;">
+        <header class="project-header" style="text-align: center; margin-bottom: 2rem;">
+          <h1>AI-Powered Face Recognition Attendance System</h1>
+          <p class="tagline" style="font-style: italic; font-size: 1.2rem; color: #888;">Automated attendance tracking with fraud prevention.</p>
+          <div class="action-buttons" style="margin-top: 1.5rem;">
+            <a href="https://github.com/Muthumaniraj26/Real-Time-Face-Recognition-Attendance-System" class="button" target="_blank" style="padding: 0.8rem 2rem; background-color: #007BFF; color: #fff; text-decoration: none; border-radius: 50px; font-weight: 600;">View Source Code</a>
+          </div>
+        </header>
+        <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; margin-bottom: 3rem; border-radius: 12px; box-shadow: 0 20px 40px rgba(0,0,0,0.5);"><iframe src="https://www.youtube.com/embed/your-video-id" frameborder="0" allowfullscreen style="position: absolute; top:0; left: 0; width: 100%; height: 100%;"></iframe></div>
+        <div class="project-content" style="line-height: 1.8; font-size: 1.15rem; color: #ddd;">
+          <p><strong>Face Recognition Attendance System</strong></p>
+<p>This system automates attendance tracking by recognizing student faces in real-time. I built the face registration, embedding extraction, and recognition pipeline, along with GUI interfaces for monitoring and managing the system.</p>
+<h3>Core Features</h3>
+<ul>
+<li>Real-time face recognition using 128D embeddings.</li>
+<li>Student in/out time tracking with centroid-based re-identification.</li>
+<li>Fraud detection to prevent photo-based spoofing.</li>
+<li>GUI for face registration, saving datasets, and monitoring attendance.</li>
+<li>Logs and alerts for missing or unregistered faces.</li>
+</ul>
+<p>The goal of this project was to streamline attendance management, reduce manual effort, and ensure accuracy and security in classrooms.</p>
+        </div>
+        <div class="project-meta">
+          <div style="flex: 1 1 300px; background-color: #1c1c1c; padding: 1.5rem; border-radius: 12px; border: 1px solid #333;"><h3 style="color: #007BFF; margin-top: 0;">Skills Applied</h3><div style="display:flex; flex-wrap:wrap;"><span class="pill" style="display:inline-block; margin: 4px; padding: 5px 12px; background: rgba(0,123,255,0.1); color: #007BFF; border-radius: 20px; font-size: 0.9rem;">Face Detection and Recognition</span><span class="pill" style="display:inline-block; margin: 4px; padding: 5px 12px; background: rgba(0,123,255,0.1); color: #007BFF; border-radius: 20px; font-size: 0.9rem;">Attendance Automation</span><span class="pill" style="display:inline-block; margin: 4px; padding: 5px 12px; background: rgba(0,123,255,0.1); color: #007BFF; border-radius: 20px; font-size: 0.9rem;">Anti-Spoofing and Fraud Prevention</span><span class="pill" style="display:inline-block; margin: 4px; padding: 5px 12px; background: rgba(0,123,255,0.1); color: #007BFF; border-radius: 20px; font-size: 0.9rem;">Database Management</span><span class="pill" style="display:inline-block; margin: 4px; padding: 5px 12px; background: rgba(0,123,255,0.1); color: #007BFF; border-radius: 20px; font-size: 0.9rem;">Real-Time Video Processing</span><span class="pill" style="display:inline-block; margin: 4px; padding: 5px 12px; background: rgba(0,123,255,0.1); color: #007BFF; border-radius: 20px; font-size: 0.9rem;">GUI Development</span></div></div>
+          <div style="flex: 1 1 300px; background-color: #1c1c1c; padding: 1.5rem; border-radius: 12px; border: 1px solid #333;"><h3 style="color: #66b2ff; margin-top: 0;">Tools & Tech</h3><div style="display:flex; flex-wrap:wrap;"><span class="pill" style="display:inline-block; margin: 4px; padding: 5px 12px; background: rgba(255,255,255,0.05); color: #e0e0e0; border-radius: 20px; font-size: 0.9rem; border: 1px solid #444;">Python</span><span class="pill" style="display:inline-block; margin: 4px; padding: 5px 12px; background: rgba(255,255,255,0.05); color: #e0e0e0; border-radius: 20px; font-size: 0.9rem; border: 1px solid #444;">OpenCV</span><span class="pill" style="display:inline-block; margin: 4px; padding: 5px 12px; background: rgba(255,255,255,0.05); color: #e0e0e0; border-radius: 20px; font-size: 0.9rem; border: 1px solid #444;">Dlib</span><span class="pill" style="display:inline-block; margin: 4px; padding: 5px 12px; background: rgba(255,255,255,0.05); color: #e0e0e0; border-radius: 20px; font-size: 0.9rem; border: 1px solid #444;">SQLite</span><span class="pill" style="display:inline-block; margin: 4px; padding: 5px 12px; background: rgba(255,255,255,0.05); color: #e0e0e0; border-radius: 20px; font-size: 0.9rem; border: 1px solid #444;">Tkinter</span><span class="pill" style="display:inline-block; margin: 4px; padding: 5px 12px; background: rgba(255,255,255,0.05); color: #e0e0e0; border-radius: 20px; font-size: 0.9rem; border: 1px solid #444;">PyQt5</span></div></div>
+        </div>
+        <div style="flex: 1 1 300px; background-color: #1c1c1c; padding: 1.5rem; border-radius: 12px; border: 1px solid #333;"><h3 style="color: #007BFF; margin-top: 0;">Collaborators</h3><ul style="list-style: none; padding: 0; margin: 0;"><li style="margin-bottom: 0.8rem;"><a href="https://github.com/Muthumaniraj26" target="_blank" style="color: #007BFF; text-decoration: none; font-weight: 500;">Muthumaniraj</a> <span style="color: #888; font-size: 0.9rem;">— Developer & Contributor</span></li></ul></div>
+        <footer style="text-align: center; margin-top: 4rem; padding-bottom: 2rem;">
+          <a href="/" style="color: #007BFF; text-decoration: none; font-weight: bold;">&larr; Back to Portfolio</a>
+        </footer>
+      </article>
+      </main>
     </div>
-  </div>
-
-  <script src="/assets/js/filter.js"></script>
-
 </body>
 </html>

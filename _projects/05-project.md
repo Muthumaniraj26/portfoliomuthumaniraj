@@ -1,26 +1,26 @@
 ---
 layout: project
-title: "Automatic LinkedIn Post Generator"
-tagline: "Generate and publish LinkedIn posts automatically using no-code tools."
-category: "MCP"
-repo_url: "https://github.com/Muthumaniraj26/linkedin-post-generator"
-video_embed_url: "https://www.youtube.com/embed/1L20KgxekiU"
+title: Automatic LinkedIn Post Generator
+tagline: Generate and publish LinkedIn posts automatically using no-code tools.
+category: MCP
+repo_url: https://github.com/Muthumaniraj26/linkedin-post-generator
+video_embed_url: https://www.youtube.com/embed/1L20KgxekiU
 collaborators:
-  - name: "Muthumaniraj"
-    github_username: "yMuthumaniraj26"
-    
+- name: Muthumaniraj
+  github_username: yMuthumaniraj26
+  role: Developer & Contributor
+  bio: Specializing in software development and project execution.
 skills:
-  - "Automation Design"
-  - "Workflow Orchestration"
-  - "Social Media Integration"
-  - "Context-Based Generation"
-
+- Automation Design
+- Workflow Orchestration
+- Social Media Integration
+- Context-Based Generation
 tools:
-  - "Pipedream"
-  - "Cursor Tools"
-  - "MCP Protocol"
-  - "JavaScript"
-  - "APIs"
+- Pipedream
+- Cursor Tools
+- MCP Protocol
+- JavaScript
+- APIs
 ---
 **Automatic LinkedIn Post Generator**
 

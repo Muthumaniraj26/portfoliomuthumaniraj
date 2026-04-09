@@ -1,29 +1,28 @@
 ---
 layout: project
-title: "AI Chatbot System"
-tagline:  with real-time responses using Gemini API."
-category: "Full Stack and MCP"
-
-video_embed_url: "https://www.youtube.com/embed/MCX192aFCuw"
+title: AI Chatbot System
+tagline: with real-time responses using Gemini API."
+category: Full Stack and MCP
+video_embed_url: https://www.youtube.com/embed/MCX192aFCuw
 collaborators:
-  - name: "Muthumaniraj"
-    github_username: "Muthumaniraj26"
-    
+- name: Muthumaniraj
+  github_username: Muthumaniraj26
+  role: Developer & Contributor
+  bio: Specializing in software development and project execution.
 skills:
-  - "Conversational AI"
-  - "API Integration"
-  - "Real-Time Response Handling"
-  - "Workflow Automation"
-  - "Web Development"
-
+- Conversational AI
+- API Integration
+- Real-Time Response Handling
+- Workflow Automation
+- Web Development
 tools:
-  - "MCP Server"
-  - "Pipedream"
-  - "Gemini API"
-  - "YouTube API"
-  - "HTML"
-  - "CSS"
-  - "JavaScript"
+- MCP Server
+- Pipedream
+- Gemini API
+- YouTube API
+- HTML
+- CSS
+- JavaScript
 ---
 **"Web-based AI chatbot**
 

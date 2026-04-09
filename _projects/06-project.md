@@ -1,26 +1,25 @@
 ---
 layout: project
-title: "Automatic Email Sender"
-tagline: "Send professional emails automatically using AI and no-code tools."
-category: "MCP"
-
-video_embed_url: "https://www.youtube.com/embed//epV4EDyXAr0"
+title: Automatic Email Sender
+tagline: Send professional emails automatically using AI and no-code tools.
+category: MCP
+video_embed_url: https://www.youtube.com/embed//epV4EDyXAr0
 collaborators:
-  - name: "Muthumaniraj"
-    github_username: "Muthumaniraj26"
-    
+- name: Muthumaniraj
+  github_username: Muthumaniraj26
+  role: Developer & Contributor
+  bio: Specializing in software development and project execution.
 skills:
-  - "Email Automation"
-  - "Context Detection"
-  - "Workflow Management"
-  - "AI Text Generation"
-
+- Email Automation
+- Context Detection
+- Workflow Management
+- AI Text Generation
 tools:
-  - "MCP Protocol"
-  - "Pipedream"
-  - "Cursor Tools"
-  - "OpenAI API"
-  - "No-Code Logic"
+- MCP Protocol
+- Pipedream
+- Cursor Tools
+- OpenAI API
+- No-Code Logic
 ---
 **Automatic Email Sender**
 

@@ -1,30 +1,29 @@
 ---
 layout: project
-title: "Driver Distraction Detection Alert System"
-tagline: "Real-time driver monitoring for enhanced road safety."
-category: "Machine Learning and Deep Learning"
-repo_url: "https://github.com/Muthumaniraj26/Driver-Distraction-Detection-System"
-video_embed_url: "https://www.youtube.com/embed/P_S2hU8zNlU"
-
+title: Driver Distraction Detection Alert System
+tagline: Real-time driver monitoring for enhanced road safety.
+category: Machine Learning and Deep Learning
+repo_url: https://github.com/Muthumaniraj26/Driver-Distraction-Detection-System
+video_embed_url: https://www.youtube.com/embed/P_S2hU8zNlU
 collaborators:
-  - name: "Muthumaniraj"
-    github_username: "Muthumaniraj26"
-
+- name: Muthumaniraj
+  github_username: Muthumaniraj26
+  role: Developer & Contributor
+  bio: Specializing in software development and project execution.
 skills:
-  - "Real-Time Object Detection"
-  - "Driver Behavior Analysis"
-  - "Alert System Integration"
-  - "Deep Learning Model Optimization"
-  - "Computer Vision"
-  - "GUI Development"
-
+- Real-Time Object Detection
+- Driver Behavior Analysis
+- Alert System Integration
+- Deep Learning Model Optimization
+- Computer Vision
+- GUI Development
 tools:
-  - "Python"
-  - "OpenCV"
-  - "YOLOv8"
-  - "TensorFlow"
-  - "Flask"
-  - "PyQt5"
+- Python
+- OpenCV
+- YOLOv8
+- TensorFlow
+- Flask
+- PyQt5
 ---
 **Driver Distraction Detection**
 
@@ -41,5 +40,3 @@ tools:
 
   The goal of this project was to enhance road safety by providing immediate alerts 
   to drivers showing distracted behavior.
-
-

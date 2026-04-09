@@ -34,6 +34,78 @@ title: Home
   </div>
 </section>
 
+<section id="internships" class="portfolio-section">
+  <h2>Internships & Experience</h2>
+  <div class="internship-container">
+    {% assign sorted_internships = site.internships | reverse %}
+    {% for internship in sorted_internships %}
+      <div class="internship-card" style="animation-delay: {{ forloop.index0 | times: 0.1 }}s;">
+        <div class="internship-header">
+          <div class="header-left">
+            {% if internship.logo %}
+              <img src="{{ internship.logo }}" class="company-logo" alt="{{ internship.company }}">
+            {% endif %}
+            <div class="header-info">
+              <h3>{{ internship.title }}</h3>
+              <div class="internship-company">
+                <i class="fas fa-building" style="font-size: 0.8rem; opacity: 0.6;"></i> 
+                {% if internship.company_url %}
+                  <a href="{{ internship.company_url }}" target="_blank" class="company-link">{{ internship.company }}</a>
+                {% else %}
+                  <strong>{{ internship.company }}</strong>
+                {% endif %}
+                <span class="duration-small"><i class="far fa-calendar-alt"></i> {{ internship.duration }}</span>
+              </div>
+            </div>
+          </div>
+          <div class="header-right">
+            <a href="{{ internship.url }}" class="internship-btn prime"><i class="fas fa-external-link-alt"></i> View Details</a>
+          </div>
+        </div>
+        <div class="internship-actions">
+          {% if internship.certificate_url and internship.certificate_url != "#" %}
+            <a href="{{ internship.certificate_url }}" class="internship-btn" target="_blank"><i class="fas fa-award"></i> Certificate</a>
+          {% endif %}
+          {% if internship.github_url and internship.github_url != "#" %}
+            <a href="{{ internship.github_url }}" class="internship-btn" target="_blank"><i class="fab fa-github"></i> Project Repo</a>
+          {% endif %}
+        </div>
+        {% if internship.skills %}
+          <div class="internship-skills">
+            {% for skill in internship.skills %}
+              <span class="skill-pill">{{ skill }}</span>
+            {% endfor %}
+          </div>
+        {% endif %}
+      </div>
+    {% endfor %}
+  </div>
+</section>
+
+<section id="youtube" class="portfolio-section">
+  <h2>Featured Content & YouTube</h2>
+  <div class="youtube-container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); gap: 2.5rem;">
+    <!-- Channel Info Card -->
+    <div class="youtube-card glass-card" style="background: rgba(255, 0, 0, 0.05); border: 1px solid rgba(255, 0, 0, 0.2); padding: 2.5rem; border-radius: 20px; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;">
+      <div style="font-size: 4rem; color: #FF0000; margin-bottom: 1rem;"><i class="fab fa-youtube"></i></div>
+      <h3 style="font-size: 1.8rem; margin-bottom: 0.5rem;">Muthumaniraj S</h3>
+      <p style="color: var(--text-muted); margin-bottom: 1.5rem;">Exploring Deep Learning, AI Engineering, and full-stack development through high-quality video tutorials and project walkthroughs.</p>
+      <a href="https://www.youtube.com/@muthumanirajs" target="_blank" class="button" style="background-color: #FF0000; border-radius: 50px; padding: 1rem 2.5rem; display: flex; align-items: center; gap: 10px;">
+        <i class="fab fa-youtube"></i> Subscribe on YouTube
+      </a>
+    </div>
+
+    <!-- Latest/Featured Video Card -->
+    <div class="youtube-video-preview glass-card" style="padding: 1.5rem; border-radius: 20px; background: var(--card-bg); border: 1px solid var(--border-color);">
+      <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 12px; margin-bottom: 1.5rem;">
+        <iframe src="https://www.youtube.com/embed/DnzJ4Csoirg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position: absolute; top:0; left: 0; width: 100%; height: 100%;"></iframe>
+      </div>
+      <h4 style="margin: 0; font-size: 1.2rem;">Featured Project: Plant Disease Detection</h4>
+      <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 0.5rem;">A deep dive into building AI-powered agricultural solutions.</p>
+    </div>
+  </div>
+</section>
+
 <section id="contact" class="contact-section">
   <h2>Get In Touch</h2>
   <form id="contact-form" action="https://formspree.io/f/xrbyoqpl" method="POST">

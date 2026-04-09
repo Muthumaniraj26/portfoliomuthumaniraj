@@ -1,29 +1,28 @@
 ---
 layout: project
-title: "ML Launchpad"
-tagline: "Validate your ML project ideas and generate AI-powered roadmaps instantly."
-category: "Machine Learning and AI"
-repo_url: "https://github.com/Muthumaniraj26/mllaunchpad"
-video_embed_url: "https://www.youtube.com/embed/RakwidlmnGk"
+title: ML Launchpad
+tagline: Validate your ML project ideas and generate AI-powered roadmaps instantly.
+category: Machine Learning and AI
+repo_url: https://github.com/Muthumaniraj26/mllaunchpad
+video_embed_url: https://www.youtube.com/embed/RakwidlmnGk
 collaborators:
-  - name: "Muthumaniraj"
-    github_username: "Muthumaniraj26"
-
+- name: Muthumaniraj
+  github_username: Muthumaniraj26
+  role: Developer & Contributor
+  bio: Specializing in software development and project execution.
 skills:
-  - "ML Project Planning"
-  - "Model Recommendation"
-  - "System Requirement Prediction"
-  - "Complexity Estimation"
-  - "Dataset Suggestion"
-
+- ML Project Planning
+- Model Recommendation
+- System Requirement Prediction
+- Complexity Estimation
+- Dataset Suggestion
 tools:
-  - "Python"
-  - "Hugging Face API"
-  - "FastAPI"
-  - "OpenAI API"
-  - "Machine Learning Pipelines"
+- Python
+- Hugging Face API
+- FastAPI
+- OpenAI API
+- Machine Learning Pipelines
 ---
-
 **ML Launchpad** 
 
 This is an AI-powered project guide that helps users validate their **machine learning project ideas** and 

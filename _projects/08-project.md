@@ -1,32 +1,30 @@
 ---
 layout: project
-title: "AI Archaeologist"
-tagline: "Analyze artifacts and uncover historical context using AI."
-category: "Machine Learning and Deep Learning"
-repo_url: "https://github.com/Muthumaniraj26/archeology"
-video_embed_url: "https://www.youtube.com/embed/zUat943SHtk"
+title: AI Archaeologist
+tagline: Analyze artifacts and uncover historical context using AI.
+category: Machine Learning and Deep Learning
+repo_url: https://github.com/Muthumaniraj26/archeology
+video_embed_url: https://www.youtube.com/embed/zUat943SHtk
 collaborators:
-  - name: "muthumaniraj"
-    github_username: "Muthumaniraj26"
-    
+- name: muthumaniraj
+  github_username: Muthumaniraj26
+  role: Developer & Contributor
+  bio: Specializing in software development and project execution.
 skills:
-  - "Object Detection"
-  - "Knowledge Graph Enrichment"
-  - "Geospatial Analysis"
-  - "Report Automation"
-  - "Mathematical Modeling"
-
+- Object Detection
+- Knowledge Graph Enrichment
+- Geospatial Analysis
+- Report Automation
+- Mathematical Modeling
 tools:
-  - "PyTorch"
-  - "Torchvision"
-  - "Flask"
-  - "Pillow"
-  - "Matplotlib"
-  - "ReportLab"
-  - "EfficientNetV2"
+- PyTorch
+- Torchvision
+- Flask
+- Pillow
+- Matplotlib
+- ReportLab
+- EfficientNetV2
 ---
-
-
 **AI Archaeologist** 
 
 This is a full-stack web application that goes beyond simple image classification to provide **rich, multi-layered analysis of historical artifacts**. Upload a photo of an artifact, and the system predicts what it is, its era, material, significance, and even nearby archaeological sites.
@@ -40,4 +38,3 @@ I am currently focusing on:
 Future updates will include enhanced multi-artifact support, improved contextual descriptions, and interactive visualizations.
 
 The goal of this project is to **augment human expertise**, making archaeology more accessible and bridging the gap between AI predictions and historical understanding.
-

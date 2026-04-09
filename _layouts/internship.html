@@ -1,0 +1,58 @@
+---
+layout: default
+---
+
+<article class="project-page" style="max-width: 950px; margin: 0 auto; padding: 2rem; animation: fadeInScale 0.8s ease-out;">
+  <header class="project-header" style="text-align: center; margin-bottom: 4rem; position: relative;">
+    <div style="position: absolute; top: -50px; left: 50%; transform: translateX(-50%); width: 300px; height: 300px; background: var(--accent-color); filter: blur(120px); opacity: 0.15; z-index: -1;"></div>
+    
+    {% if page.logo %}
+      <img src="{{ page.logo }}" alt="{{ page.company }} logo" style="width: 160px; height: 160px; border-radius: 24px; margin-bottom: 2.5rem; object-fit: contain; background: #fff; padding: 15px; border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 10px 40px rgba(0,0,0,0.4);">
+    {% endif %}
+
+    <h1 style="font-size: 3.2rem; margin-bottom: 0.8rem; color: #fff; font-weight: 800; letter-spacing: -0.03em;">{{ page.title }}</h1>
+    
+    <p class="tagline" style="font-size: 1.3rem; color: #aaa; font-weight: 500;">
+      <i class="fas fa-at" style="color: var(--accent-color); opacity: 0.7;"></i> 
+      {% if page.company_url %}
+        <a href="{{ page.company_url }}" target="_blank" style="color: var(--accent-color); text-decoration: none; font-weight: 700;">{{ page.company }}</a>
+      {% else %}
+        <span style="color: var(--accent-color); font-weight: 700;">{{ page.company }}</span>
+      {% endif %}
+      <span style="margin: 0 15px; opacity: 0.3;">|</span> 
+      <i class="far fa-calendar-alt" style="opacity: 0.5;"></i> {{ page.duration }}
+    </p>
+
+    <div class="action-buttons" style="margin-top: 2.5rem; display: flex; justify-content: center; gap: 1.5rem;">
+      {% if page.certificate_url and page.certificate_url != "#" %}
+        <a href="{{ page.certificate_url }}" class="internship-btn prime" target="_blank"><i class="fas fa-award"></i> View Certificate</a>
+      {% endif %}
+      {% if page.github_url and page.github_url != "#" %}
+        <a href="{{ page.github_url }}" class="internship-btn prime" target="_blank"><i class="fab fa-github"></i> Project Repository</a>
+      {% endif %}
+    </div>
+  </header>
+
+  <div class="project-content" style="line-height: 1.8; font-size: 1.2rem; color: #ccc; margin-bottom: 4rem; background: rgba(255,255,255,0.03); padding: 3rem; border-radius: 24px; border: 1px solid rgba(255,255,255,0.05); backdrop-filter: blur(10px);">
+    {{ content }}
+  </div>
+
+  {% if page.skills %}
+    <div class="project-meta" style="background: linear-gradient(135deg, rgba(30,30,30,0.8), rgba(20,20,20,0.8)); padding: 2.5rem; border-radius: 24px; border: 1px solid rgba(255,255,255,0.05); backdrop-filter: blur(10px);">
+      <h3 style="color: var(--accent-color); margin-top: 0; margin-bottom: 2rem; display: flex; align-items: center; gap: 12px; font-size: 1.5rem;">
+        <i class="fas fa-brain"></i> Core Expertise & Technologies
+      </h3>
+      <div class="pill-container" style="display: flex; flex-wrap: wrap; gap: 12px;">
+        {% for skill in page.skills %}
+          <span class="skill-pill">{{ skill }}</span>
+        {% endfor %}
+      </div>
+    </div>
+  {% endif %}
+
+  <footer style="text-align: center; margin-top: 5rem; padding-bottom: 3rem;">
+    <a href="/#internships" class="internship-btn" style="display: inline-flex; align-items: center; gap: 10px; padding: 12px 30px; border-radius: 40px; border: 1px solid rgba(255,255,255,0.1); color: #fff; text-decoration: none; font-weight: 600; background: rgba(255,255,255,0.05); transition: all 0.3s ease;">
+      <i class="fas fa-arrow-left"></i> Back to Experience
+    </a>
+  </footer>
+</article>

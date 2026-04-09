@@ -32,13 +32,16 @@ a:hover { color: white; }
 
 /* --- 2. Main Layout (Sidebar + Content) --- */
 .site-wrapper {
-  display: grid;
-  grid-template-columns: 350px 1fr;
+  display: block;
   min-height: 100vh;
+  max-width: 100vw;
+  overflow-x: hidden;
 }
 .sidebar {
-  position: sticky;
+  position: fixed;
+  left: 0;
   top: 0;
+  width: 350px;
   height: 100vh;
   background-color: var(--card-bg);
   border-right: 1px solid var(--border-color);
@@ -47,9 +50,13 @@ a:hover { color: white; }
   display: flex;
   flex-direction: column;
   overflow-y: auto;
+  z-index: 100;
 }
 .sidebar-content { text-align: center; }
-.main-content { padding: 3rem; }
+.main-content { 
+  padding: 3rem; 
+  margin-left: 350px; 
+}
 .main-footer { text-align: center; margin-top: 4rem; padding-top: 2rem; border-top: 1px solid var(--border-color); color: var(--text-muted); }
 
 /* --- 3. Sidebar Content --- */
@@ -117,9 +124,17 @@ a:hover { color: white; }
 @media (max-width: 992px) {
   .site-wrapper { grid-template-columns: 1fr; }
   .sidebar {
-    position: relative; height: auto; border-right: none; border-bottom: 1px solid var(--border-color);
+    position: relative; 
+    width: 100%;
+    height: auto; 
+    border-right: none; 
+    border-bottom: 1px solid var(--border-color);
   }
-  .main-content { padding: 2rem; }
+  .main-content { 
+    padding: 2rem; 
+    margin-left: 0;
+    width: 100%;
+  }
 }
 
 /* --- 9. Skills & Tools Modal --- */
@@ -191,12 +206,193 @@ a:hover { color: white; }
     column-count: 1;
   }
 }
-.site-wrapper {
-  display: grid;
-  grid-template-columns: 350px 1fr;
-  min-height: 100vh;
-  
-  /* --- ADD THESE TWO LINES --- */
-  max-width: 100vw;      /* Explicitly set max width to the viewport width */
-  overflow-x: hidden;    /* Hide any tiny overflow that might still occur */
+
+/* --- 10. Internship Section Styles --- */
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.internship-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.internship-card {
+  /* Glassmorphism */
+  background: rgba(30, 30, 30, 0.6);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 2rem;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  animation: fadeInScale 0.6s ease-out forwards;
+  opacity: 0; /* Handled by animation */
+}
+
+.internship-card:hover {
+  background: rgba(40, 40, 40, 0.8);
+  transform: translateY(-5px) scale(1.01);
+  border-color: rgba(0, 123, 255, 0.5);
+  box-shadow: 0 10px 40px rgba(0, 123, 255, 0.15);
+}
+
+.internship-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+}
+
+.header-left {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.company-logo {
+  width: 54px;
+  height: 54px;
+  object-fit: contain;
+  background: #fff;
+  padding: 6px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+}
+
+.internship-card:hover .company-logo {
+  transform: rotate(-5deg) scale(1.1);
+}
+
+.header-info h3 {
+  margin: 0 0 6px 0;
+  font-size: 1.3rem;
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.internship-company {
+  font-size: 1rem;
+  color: var(--text-light);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.company-link {
+  color: var(--accent-color);
+  font-weight: 600;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.company-link:hover {
+  opacity: 0.8;
+  text-decoration: underline;
+}
+
+.duration-small {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-top: 6px;
+  font-weight: 500;
+}
+
+.internship-actions {
+  display: flex;
+  gap: 1rem;
+  margin-left: 4.8rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.internship-btn {
+  padding: 6px 16px;
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-light);
+  border-radius: 30px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.internship-btn.prime {
+  background: linear-gradient(135deg, var(--accent-color), #0056b3);
+  border-color: transparent;
+  color: white;
+  box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
+}
+
+.internship-btn:hover {
+  background: #fff;
+  color: #000;
+  border-color: #fff;
+  transform: translateY(-2px);
+}
+
+.internship-btn.prime:hover {
+  background: #fff;
+  color: var(--accent-color);
+  box-shadow: 0 6px 20px rgba(0, 123, 255, 0.4);
+}
+
+.internship-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-left: 4.8rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.skill-pill {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.03);
+  padding: 4px 12px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.2s ease;
+}
+
+.internship-card:hover .skill-pill {
+  border-color: rgba(0, 123, 255, 0.2);
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .internship-header {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .header-right {
+    width: 100%;
+  }
+  .internship-btn.prime {
+    width: 100%;
+    justify-content: center;
+  }
+  .internship-actions, .internship-skills {
+    margin-left: 0;
+  }
 }

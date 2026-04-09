@@ -11,3 +11,6 @@ collections:
   projects:
     output: true # This creates a separate page for each project
     permalink: /projects/:name/
+  internships:
+    output: true
+    permalink: /internships/:name/

@@ -1,30 +1,29 @@
 ---
 layout: project
-title: "Real-Time Emotion Detection"
-tagline: "Analyze facial expressions in real time using deep learning."
-category: "Deep Learning"
-repo_url: "https://github.com/Muthumaniraj26/start_emotional_detection"
-video_embed_url: "https://www.youtube.com/embed/en-5C3P7Np0"
+title: Real-Time Emotion Detection
+tagline: Analyze facial expressions in real time using deep learning.
+category: Deep Learning
+repo_url: https://github.com/Muthumaniraj26/start_emotional_detection
+video_embed_url: https://www.youtube.com/embed/en-5C3P7Np0
 collaborators:
-  - name: "Muthumaniraj"
-    github_username: "Muthumaniraj26"
-    
+- name: Muthumaniraj
+  github_username: Muthumaniraj26
+  role: Developer & Contributor
+  bio: Specializing in software development and project execution.
 skills:
-  - "Facial Expression Recognition"
-  - "Image Processing"
-  - "Model Training & Evaluation"
-  - "Dataset Preprocessing"
-  - "Computer Vision Integration"
-
+- Facial Expression Recognition
+- Image Processing
+- Model Training & Evaluation
+- Dataset Preprocessing
+- Computer Vision Integration
 tools:
-  - "Python"
-  - "OpenCV"
-  - "TensorFlow/Keras"
-  - "Dlib"
-  - "NumPy"
-  - "PyQt5"
+- Python
+- OpenCV
+- TensorFlow/Keras
+- Dlib
+- NumPy
+- PyQt5
 ---
-
 **Emotional detection**
 This project analyzes facial expressions in real time and classifies emotions such as happiness, sadness, anger, surprise, and more using deep learning and image processing techniques. 
 

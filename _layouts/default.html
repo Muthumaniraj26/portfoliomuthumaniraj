@@ -1,22 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ page.title }} | {{ site.title }}</title>
-  
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
-  
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500&display=swap"
+    rel="stylesheet">
+
   <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
 
-  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="/assets/css/style.css?v={{ 'now' | date: '%s' }}">
 </head>
+
 <body>
 
-  {% assign all_items = "" | split: "," %}{% for project in site.projects %}{% if project.skills %}{% assign all_items = all_items | concat: project.skills %}{% endif %}{% if project.tools %}{% assign all_items = all_items | concat: project.tools %}{% endif %}{% endfor %}
+  {% assign all_items = "" | split: "," %}
+  {% for project in site.projects %}
+  {% if project.skills %}{% assign all_items = all_items | concat: project.skills %}{% endif %}
+  {% if project.tools %}{% assign all_items = all_items | concat: project.tools %}{% endif %}
+  {% endfor %}
+  {% for internship in site.internships %}
+  {% if internship.skills %}{% assign all_items = all_items | concat: internship.skills %}{% endif %}
+  {% endfor %}
   {% assign unique_items = all_items | uniq | sort %}
 
   <div class="site-wrapper">
@@ -31,6 +41,10 @@
             <h3 class="counter" data-count="{{ site.projects.size }}">0</h3>
             <p>Projects</p>
           </div>
+          <div class="stat-item">
+            <h3 class="counter" data-count="{{ site.internships.size }}">0</h3>
+            <p>Internships</p>
+          </div>
           <div class="stat-item" id="skills-stats-trigger" style="cursor: pointer;">
             <h3 class="counter" data-count="{{ unique_items.size }}">0</h3>
             <p>Skills & Tools</p>
@@ -44,14 +58,20 @@
           <a href="https://www.youtube.com/@muthumanirajs" target="_blank">
             <i class="devicon-youtube-plain"></i> Youtube
           </a>
+          <a href="https://medium.com/@muthumanirajs3" target="_blank">
+            <i class="fab fa-medium"></i> Medium
+          </a>
           <a href="https://www.linkedin.com/in/muthumaniraj-sanjeevi/" target="_blank">
             <i class="devicon-linkedin-plain"></i> Linked in
+          </a>
+          <a href="https://drive.google.com/file/d/15v__MFoTK-Owkt8KzBRkweMlWe4bpfRU/view?usp=sharing" target="_blank">
+            <i class="fas fa-file-pdf"></i> Resume
           </a>
           <a href="/#contact">
             <i class="fas fa-envelope"></i> Contact Me
           </a>
         </nav>
-        
+
       </div>
     </aside>
 
@@ -69,14 +89,15 @@
       <h2>All Skills & Tools</h2>
       <ul class="skills-modal-list">
         {% for item in unique_items %}
-          <li>{{ item | capitalize }}</li>
+        <li>{{ item | capitalize }}</li>
         {% endfor %}
       </ul>
-      
+
     </div>
   </div>
 
   <script src="/assets/js/filter.js"></script>
 
 </body>
+
 </html>

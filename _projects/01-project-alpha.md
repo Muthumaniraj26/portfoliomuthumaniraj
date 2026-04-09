@@ -1,34 +1,32 @@
 ---
 layout: project
-title: "Plant Disease Detection Web App"
-tagline: "Real-time plant disease detection with preventive insights."
-category: "Machine Learning and AI"
-repo_url: "https://github.com/Muthumaniraj26/plant-new-2"
-video_embed_url: "https://www.youtube.com/embed/DnzJ4Csoirg"
-
+title: Plant Disease Detection Web App
+tagline: Real-time plant disease detection with preventive insights.
+category: Machine Learning and AI
+repo_url: https://github.com/Muthumaniraj26/plant-new-2
+video_embed_url: https://www.youtube.com/embed/DnzJ4Csoirg
 collaborators:
-  - name: "Muthumaniraj"
-    github_username: "Muthumaniraj26"
-
+- name: Muthumaniraj
+  github_username: Muthumaniraj26
+  role: Developer & Contributor
+  bio: Specializing in software development and project execution.
 skills:
-  - "Model Deployment"
-  - "API Development"
-  - "Real-Time Inference"
-  - "Multilingual Support"
-  - "Data Visualization"
-  - "Report Generation"
-  - "Computer Vision"
-
+- Model Deployment
+- API Development
+- Real-Time Inference
+- Multilingual Support
+- Data Visualization
+- Report Generation
+- Computer Vision
 tools:
-  - "Python"
-  - "Flask"
-  - "TensorFlow Lite"
-  - "OpenCV"
-  - "JavaScript"
-  - "Bootstrap"
-  - "Chart.js"
+- Python
+- Flask
+- TensorFlow Lite
+- OpenCV
+- JavaScript
+- Bootstrap
+- Chart.js
 ---
-
 **Plant Disease Detection**
   This project is a web application that detects plant diseases in real-time 
   and provides multilingual prevention tips. I was responsible for building 
@@ -46,4 +44,3 @@ tools:
   The goal of this project was to create an intuitive and powerful dashboard 
   for farmers and plant enthusiasts to quickly detect diseases and take 
   preventive actions.
-

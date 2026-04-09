@@ -1,29 +1,29 @@
 ---
 layout: project
-title: "AI-Powered Face Recognition Attendance System"
-tagline: "Automated attendance tracking with fraud prevention."
-category: "Machine Learning and AI"
-repo_url: "https://github.com/Muthumaniraj26/Real-Time-Face-Recognition-Attendance-System"
-video_embed_url: "https://www.youtube.com/embed/your-video-id"
+title: AI-Powered Face Recognition Attendance System
+tagline: Automated attendance tracking with fraud prevention.
+category: Machine Learning and AI
+repo_url: https://github.com/Muthumaniraj26/Real-Time-Face-Recognition-Attendance-System
+video_embed_url: https://www.youtube.com/embed/your-video-id
 collaborators:
-  - name: "Muthumaniraj"
-    github_username: "Muthumaniraj26"
-
+- name: Muthumaniraj
+  github_username: Muthumaniraj26
+  role: Developer & Contributor
+  bio: Specializing in software development and project execution.
 skills:
-  - "Face Detection and Recognition"
-  - "Attendance Automation"
-  - "Anti-Spoofing and Fraud Prevention"
-  - "Database Management"
-  - "Real-Time Video Processing"
-  - "GUI Development"
-
+- Face Detection and Recognition
+- Attendance Automation
+- Anti-Spoofing and Fraud Prevention
+- Database Management
+- Real-Time Video Processing
+- GUI Development
 tools:
-  - "Python"
-  - "OpenCV"
-  - "Dlib"
-  - "SQLite"
-  - "Tkinter"
-  - "PyQt5"
+- Python
+- OpenCV
+- Dlib
+- SQLite
+- Tkinter
+- PyQt5
 ---
 **Face Recognition Attendance System**
 

@@ -95,54 +95,54 @@ PAGE_WRAPPER = """<!DOCTYPE html>
   <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
 </head>
-<body style="background: #121212; color: #e0e0e0; margin: 0;">
+<body style="background: #0a0a0c; background: radial-gradient(circle at top right, #1a1a2e, #0a0a0c 60%); color: #f5f5f7; margin: 0; min-height: 100vh;">
     <div class="site-wrapper">
-      <aside class="sidebar">
+      <aside class="sidebar" style="background: rgba(255, 255, 255, 0.02); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-right: 1px solid rgba(255, 255, 255, 0.05);">
         <div class="sidebar-content">
-          <img src="/assets/images/profile.jpeg" alt="Profile" class="profile-photo" style="width: 150px; height: 150px; border-radius: 50%; border: 3px solid #007BFF; margin-bottom: 1.5rem; object-fit: cover;">
-          <h1 style="font-size: 1.8rem; margin: 0; color: #fff;">Muthumaniraj Sanjeevi</h1>
-          <p style="color: #888; font-size: 0.9rem; margin: 0.5rem 0 1.5rem 0;">A portfolio showcasing my projects and skills.</p>
+          <img src="/assets/images/profile.jpeg" alt="Profile" class="profile-photo" style="width: 140px; height: 140px; border-radius: 50%; border: 2px solid rgba(255, 255, 255, 0.1); margin-bottom: 1.5rem; object-fit: cover; box-shadow: 0 0 20px rgba(0, 123, 255, 0.2);">
+          <h1 style="font-size: 1.8rem; margin: 0; color: #fff; font-family: 'Poppins', sans-serif;">{site_title}</h1>
+          <p style="color: #8e8e93; font-size: 0.9rem; margin: 0.5rem 0 1.5rem 0;">{site_description}</p>
           
-          <div class="stats-container" style="display: flex; justify-content: space-around; background: rgba(255,255,255,0.05); padding: 1rem; border-radius: 15px; margin-bottom: 2rem; border: 1px solid rgba(255,255,255,0.1);">
+          <div class="stats-container" style="display: flex; justify-content: space-around; background: rgba(255,255,255,0.03); padding: 1rem; border-radius: 15px; margin-bottom: 2rem; border: 1px solid rgba(255,255,255,0.05); backdrop-filter: blur(10px);">
             <div class="stat-item" style="text-align: center;">
-              <h3 style="margin: 0; font-size: 1.2rem; color: #fff;">{proj_count}</h3>
-              <p style="margin: 0; font-size: 0.75rem; color: #888;">Projects</p>
+              <h3 style="margin: 0; font-size: 1.1rem; color: #fff;">{proj_count}</h3>
+              <p style="margin: 3px 0 0 0; font-size: 0.7rem; color: #8e8e93; text-transform: uppercase; letter-spacing: 0.5px;">Projects</p>
             </div>
             <div class="stat-item" style="text-align: center;">
-              <h3 style="margin: 0; font-size: 1.2rem; color: #fff;">{int_count}</h3>
-              <p style="margin: 0; font-size: 0.75rem; color: #888;">Internships</p>
+              <h3 style="margin: 0; font-size: 1.1rem; color: #fff;">{int_count}</h3>
+              <p style="margin: 3px 0 0 0; font-size: 0.7rem; color: #8e8e93; text-transform: uppercase; letter-spacing: 0.5px;">Intrns</p>
             </div>
              <div class="stat-item" style="text-align: center;">
-              <h3 style="margin: 0; font-size: 1.2rem; color: #fff;">{skill_count}</h3>
-              <p style="margin: 0; font-size: 0.75rem; color: #888;">Skills</p>
+              <h3 style="margin: 0; font-size: 1.1rem; color: #fff;">{skill_count}</h3>
+              <p style="margin: 3px 0 0 0; font-size: 0.7rem; color: #8e8e93; text-transform: uppercase; letter-spacing: 0.5px;">Skills</p>
             </div>
              <div class="stat-item" style="text-align: center;">
-              <h3 style="margin: 0; font-size: 1.2rem; color: #fff;">{tool_count}</h3>
-              <p style="margin: 0; font-size: 0.75rem; color: #888;">Tools</p>
+              <h3 style="margin: 0; font-size: 1.1rem; color: #fff;">{tool_count}</h3>
+              <p style="margin: 3px 0 0 0; font-size: 0.7rem; color: #8e8e93; text-transform: uppercase; letter-spacing: 0.5px;">Tools</p>
             </div>
           </div>
 
-          <nav class="sidebar-nav" style="display: flex; flex-direction: column; gap: 0.8rem; text-align: left; padding: 0 1rem;">
-            <a href="/" style="color: #fff; text-decoration: none; font-weight: 500; display: flex; align-items: center; gap: 10px;">
-              <i class="fas fa-home"></i> Home
+          <nav class="sidebar-nav" style="display: flex; flex-direction: column; gap: 0.7rem; text-align: left; padding: 0 0.5rem;">
+            <a href="/" style="color: #fff; text-decoration: none; font-weight: 500; display: flex; align-items: center; gap: 12px; padding: 10px; border-radius: 10px; transition: background 0.3s;">
+              <i class="fas fa-home" style="width: 20px;"></i> <span>Home</span>
             </a>
-            <a href="https://github.com/Muthumaniraj26" target="_blank" style="color: #888; text-decoration: none; font-weight: 500; display: flex; align-items: center; gap: 10px;">
-              <i class="devicon-github-original"></i> GitHub
+            <a href="https://github.com/Muthumaniraj26" target="_blank" style="color: #8e8e93; text-decoration: none; font-weight: 500; display: flex; align-items: center; gap: 12px; padding: 10px; border-radius: 10px; transition: all 0.3s;">
+              <i class="devicon-github-original" style="width: 20px;"></i> <span>GitHub</span>
             </a>
-            <a href="https://www.youtube.com/@muthumanirajs" target="_blank" style="color: #888; text-decoration: none; font-weight: 500; display: flex; align-items: center; gap: 10px;">
-              <i class="devicon-youtube-plain"></i> Youtube
+            <a href="https://www.youtube.com/@muthumanirajs" target="_blank" style="color: #8e8e93; text-decoration: none; font-weight: 500; display: flex; align-items: center; gap: 12px; padding: 10px; border-radius: 10px; transition: all 0.3s;">
+              <i class="devicon-youtube-plain" style="width: 20px;"></i> <span>Youtube</span>
             </a>
-            <a href="https://medium.com/@muthumanirajs3" target="_blank" style="color: #888; text-decoration: none; font-weight: 500; display: flex; align-items: center; gap: 10px;">
-              <i class="fab fa-medium"></i> Medium
+            <a href="https://medium.com/@muthumanirajs3" target="_blank" style="color: #8e8e93; text-decoration: none; font-weight: 500; display: flex; align-items: center; gap: 12px; padding: 10px; border-radius: 10px; transition: all 0.3s;">
+              <i class="fab fa-medium" style="width: 20px;"></i> <span>Medium</span>
             </a>
-            <a href="https://www.linkedin.com/in/muthumaniraj-sanjeevi/" target="_blank" style="color: #888; text-decoration: none; font-weight: 500; display: flex; align-items: center; gap: 10px;">
-              <i class="devicon-linkedin-plain"></i> LinkedIn
+            <a href="https://www.linkedin.com/in/muthumaniraj-sanjeevi/" target="_blank" style="color: #8e8e93; text-decoration: none; font-weight: 500; display: flex; align-items: center; gap: 12px; padding: 10px; border-radius: 10px; transition: all 0.3s;">
+              <i class="devicon-linkedin-plain" style="width: 20px;"></i> <span>LinkedIn</span>
             </a>
           </nav>
         </div>
       </aside>
       
-      <main class="main-content" style="margin-left: 350px; padding: 3rem;">
+      <main class="main-content" style="margin-left: 350px; padding: 4rem;">
           {body}
       </main>
     </div>

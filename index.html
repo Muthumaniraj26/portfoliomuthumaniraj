@@ -17,7 +17,7 @@ title: Home
   <div class="grid" id="project-grid">
     {% for project in site.projects %}
       <a href="{{ project.url }}" class="card-link" data-category="{{ project.category | slugify }}">
-        <div class="card" data-category="{{ project.category | slugify }}">
+        <div class="card glass-card" data-category="{{ project.category | slugify }}">
           
           <div class="card-content">
             <h3>{{ project.title }}</h3>

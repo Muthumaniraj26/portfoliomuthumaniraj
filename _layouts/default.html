@@ -19,15 +19,21 @@
 
 <body>
 
-  {% assign all_items = "" | split: "," %}
+  {% assign all_skills = "" | split: "," %}
+  {% assign all_tools = "" | split: "," %}
+  
   {% for project in site.projects %}
-  {% if project.skills %}{% assign all_items = all_items | concat: project.skills %}{% endif %}
-  {% if project.tools %}{% assign all_items = all_items | concat: project.tools %}{% endif %}
+    {% if project.skills %}{% assign all_skills = all_skills | concat: project.skills %}{% endif %}
+    {% if project.tools %}{% assign all_tools = all_tools | concat: project.tools %}{% endif %}
   {% endfor %}
+  
   {% for internship in site.internships %}
-  {% if internship.skills %}{% assign all_items = all_items | concat: internship.skills %}{% endif %}
+    {% if internship.skills %}{% assign all_skills = all_skills | concat: internship.skills %}{% endif %}
+    {% if internship.tools %}{% assign all_tools = all_tools | concat: internship.tools %}{% endif %}
   {% endfor %}
-  {% assign unique_items = all_items | uniq | sort %}
+  
+  {% assign unique_skills = all_skills | uniq | sort %}
+  {% assign unique_tools = all_tools | uniq | sort %}
 
   <div class="site-wrapper">
     <aside class="sidebar">
@@ -46,8 +52,12 @@
             <p>Internships</p>
           </div>
           <div class="stat-item" id="skills-stats-trigger" style="cursor: pointer;">
-            <h3 class="counter" data-count="{{ unique_items.size }}">0</h3>
-            <p>Skills & Tools</p>
+            <h3 class="counter" data-count="{{ unique_skills.size }}">0</h3>
+            <p>Skills</p>
+          </div>
+          <div class="stat-item" id="tools-stats-trigger" style="cursor: pointer;">
+            <h3 class="counter" data-count="{{ unique_tools.size }}">0</h3>
+            <p>Tools</p>
           </div>
         </div>
 

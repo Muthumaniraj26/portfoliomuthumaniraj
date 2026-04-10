@@ -101,9 +101,28 @@ PAGE_WRAPPER = """<!DOCTYPE html>
         <div class="sidebar-content">
           <img src="/assets/images/profile.jpeg" alt="Profile" class="profile-photo" style="width: 150px; height: 150px; border-radius: 50%; border: 3px solid #007BFF; margin-bottom: 1.5rem; object-fit: cover;">
           <h1 style="font-size: 1.8rem; margin: 0; color: #fff;">Muthumaniraj Sanjeevi</h1>
-          <p style="color: #888; font-size: 0.9rem; margin: 0.5rem 0 2rem 0;">A portfolio showcasing my projects and skills.</p>
+          <p style="color: #888; font-size: 0.9rem; margin: 0.5rem 0 1.5rem 0;">A portfolio showcasing my projects and skills.</p>
           
-          <nav class="sidebar-nav" style="display: flex; flex-direction: column; gap: 1rem; text-align: left; padding: 0 1rem;">
+          <div class="stats-container" style="display: flex; justify-content: space-around; background: rgba(255,255,255,0.05); padding: 1rem; border-radius: 15px; margin-bottom: 2rem; border: 1px solid rgba(255,255,255,0.1);">
+            <div class="stat-item" style="text-align: center;">
+              <h3 style="margin: 0; font-size: 1.2rem; color: #fff;">{proj_count}</h3>
+              <p style="margin: 0; font-size: 0.75rem; color: #888;">Projects</p>
+            </div>
+            <div class="stat-item" style="text-align: center;">
+              <h3 style="margin: 0; font-size: 1.2rem; color: #fff;">{int_count}</h3>
+              <p style="margin: 0; font-size: 0.75rem; color: #888;">Internships</p>
+            </div>
+             <div class="stat-item" style="text-align: center;">
+              <h3 style="margin: 0; font-size: 1.2rem; color: #fff;">{skill_count}</h3>
+              <p style="margin: 0; font-size: 0.75rem; color: #888;">Skills</p>
+            </div>
+             <div class="stat-item" style="text-align: center;">
+              <h3 style="margin: 0; font-size: 1.2rem; color: #fff;">{tool_count}</h3>
+              <p style="margin: 0; font-size: 0.75rem; color: #888;">Tools</p>
+            </div>
+          </div>
+
+          <nav class="sidebar-nav" style="display: flex; flex-direction: column; gap: 0.8rem; text-align: left; padding: 0 1rem;">
             <a href="/" style="color: #fff; text-decoration: none; font-weight: 500; display: flex; align-items: center; gap: 10px;">
               <i class="fas fa-home"></i> Home
             </a>
@@ -130,7 +149,36 @@ PAGE_WRAPPER = """<!DOCTYPE html>
 </body>
 </html>"""
 
+def get_overall_stats():
+    all_skills = set()
+    all_tools = set()
+    projects = []
+    
+    # Process Projects
+    for md_path in glob.glob(os.path.join(projects_dir, "*.md")):
+        with open(md_path, 'r', encoding='utf-8') as f:
+            content = f.read()
+        yaml_str, _ = extract_frontmatter(content)
+        if not yaml_str: continue
+        data = yaml.safe_load(yaml_str)
+        if 'skills' in data: all_skills.update(data['skills'])
+        if 'tools' in data: all_tools.update(data['tools'])
+        projects.append(data)
+        
+    # Process Internships
+    for md_path in glob.glob(os.path.join(internships_dir, "*.md")):
+        with open(md_path, 'r', encoding='utf-8') as f:
+            content = f.read()
+        yaml_str, _ = extract_frontmatter(content)
+        if not yaml_str: continue
+        data = yaml.safe_load(yaml_str)
+        if 'skills' in data: all_skills.update(data['skills'])
+        if 'tools' in data: all_tools.update(data['tools'])
+        
+    return len(projects), len(os.listdir(internships_dir)), len(all_skills), len(all_tools)
+
 def process_projects():
+    p_count, i_count, s_count, t_count = get_overall_stats()
     for md_path in glob.glob(os.path.join(projects_dir, "*.md")):
         with open(md_path, 'r', encoding='utf-8') as f:
             content = f.read()
@@ -166,10 +214,18 @@ def process_projects():
             tools_html=tools_html, collaborators_html=collaborators_html
         )
         with open(site_html_path, 'w', encoding='utf-8') as f:
-            f.write(PAGE_WRAPPER.format(title=data.get('title', ''), body=final_ui))
+            f.write(PAGE_WRAPPER.format(
+                title=data.get('title', ''), 
+                body=final_ui,
+                proj_count=p_count,
+                int_count=i_count,
+                skill_count=s_count,
+                tool_count=t_count
+            ))
 
 def process_internships():
     internships_list = []
+    p_count, i_count, s_count, t_count = get_overall_stats()
     for md_path in sorted(glob.glob(os.path.join(internships_dir, "*.md")), reverse=True):
         with open(md_path, 'r', encoding='utf-8') as f:
             content = f.read()
@@ -201,7 +257,14 @@ def process_internships():
             skills_html=skills_html
         )
         with open(site_html_path, 'w', encoding='utf-8') as f:
-            f.write(PAGE_WRAPPER.format(title=data.get('title', ''), body=final_ui))
+            f.write(PAGE_WRAPPER.format(
+                title=data.get('title', ''), 
+                body=final_ui,
+                proj_count=p_count,
+                int_count=i_count,
+                skill_count=s_count,
+                tool_count=t_count
+            ))
     return internships_list
 
 def update_homepage(internships):
@@ -259,7 +322,15 @@ def update_homepage(internships):
     # 3. Final Wrap with PAGE_WRAPPER
     import time
     version = int(time.time())
-    final_html = PAGE_WRAPPER.format(title="Home", body=body_content)
+    p_count, i_count, s_count, t_count = get_overall_stats()
+    final_html = PAGE_WRAPPER.format(
+        title="Home", 
+        body=body_content,
+        proj_count=p_count,
+        int_count=i_count,
+        skill_count=s_count,
+        tool_count=t_count
+    )
     
     # 4. Cache bust CSS in the final output
     final_html = re.sub(r'href="/assets/css/style\.css(\?v=[^"]+)?"', f'href="/assets/css/style.css?v={version}"', final_html)
